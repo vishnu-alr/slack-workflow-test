@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: node test/sql.test.js
+      - run: for f in test/*.test.js; do node "$f"; done
